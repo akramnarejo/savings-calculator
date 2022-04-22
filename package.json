@@ -17,7 +17,7 @@
   },
   "homepage": "https://akramnarejo.github.io/savings-calculator",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
