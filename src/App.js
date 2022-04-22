@@ -59,11 +59,11 @@ function App() {
   }
   return (
     <Container>
-      <Paper elevation={3} sx={{border: '1px solid', padding: 5, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+      <Paper elevation={3} sx={{padding: 5, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
         <Box mt={5} mb={10}>
           <Typography component="h1" sx={{fontWeight: 900, fontSize:{md:30,xs:20}}} fontFamily="Lato,'Lucida Grande',Verdana,sans-serif">SAVINGS CALCULATOR</Typography>
         </Box>
-        <Box maxwidth="900px" sx={{border: '1px solid'}}>
+        <Box maxwidth="900px">
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={10} md={5} sx={{display: 'flex', flexDirection: 'column', gap: 1}}>
               <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{sm:16,xs:12}}}>MONTHLY LEASE COST</Typography>
@@ -137,32 +137,48 @@ function App() {
             <Button variant="contained" size="small" disableElevation sx={{fontWeight: 900}}>Submit</Button>
           </Box>
         </Box>
-        <Box mt={3} sx={{width:"100%", border: '1px solid', padding: {sm:'10px 45px', lg: '20px 85px'}, boxSizing: 'border-box', display: 'flex', justifyContent: 'space-evenly', flexDirection: 'column', flexWrap:'wrap', gap: 2}}> 
-          <Typography component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Savings</Typography>
-          <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>value</Typography>
-          </Box>
-          <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={1} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>SPACE OPTIMIZATION:<br />CAPEX COST SAVINGS</Typography>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>value</Typography>
-          </Box>
-          <Typography component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Return</Typography>
-          <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>value</Typography>
-          </Box>
-          <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>value</Typography>
-          </Box>
-          <Divider />
-          <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
-            <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>value</Typography>
-          </Box>
-          <Typography component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Estimations</Typography>
-          <Typography component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Competitor Comparison</Typography>
+        <Box mt={3} sx={{width:"100%", padding: {sm:'10px 45px', lg: '20px 85px'}, boxSizing: 'border-box', display: 'flex', justifyContent: 'space-evenly', flexDirection: 'column', flexWrap:'wrap', gap: 2}}> 
+          <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Savings</Typography>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={1} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>SPACE OPTIMIZATION:<br />CAPEX COST SAVINGS</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+          <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Return</Typography>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>TOTAL INVESTMENT:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>TOTAL SAVINGS:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+            <Divider />
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>NET SAVINGS:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+          <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Estimations</Typography>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>ROI:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={1} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>COST/SF:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+          <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Competitor Comparison</Typography>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>DIRECT SAVINGS W/ AT:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
+            <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+              <Typography component="p" lineHeight={1} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>%SAVINGS COMPARISON:</Typography>
+              <Typography component="p" lineHeight={0.5} color="darkblue" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>$ 00.0</Typography>
+            </Box>
         </Box>
       </Paper>
     </Container>
