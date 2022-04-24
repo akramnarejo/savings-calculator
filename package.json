@@ -2,6 +2,7 @@
   "name": "savings-calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://akramnarejo.github.io/savings-calculator",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -14,9 +15,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://akramnarejo.github.io/savings-calculator",
   "scripts": {
-    "predeploy": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
