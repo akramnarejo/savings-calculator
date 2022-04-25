@@ -23,6 +23,7 @@ const miniInvestment = (val) => {
       }else{
         p.push(false)
       }
+      return 0
     })
 
     // find q
@@ -32,6 +33,7 @@ const miniInvestment = (val) => {
       }else{
         q.push(true)
       }
+      return 0
     })
 
     for(let i = 0; i < q.length; i++){
@@ -85,6 +87,7 @@ const findTotalInvestment = (val=0) => {
       }else{
           p.push(false)
       }
+      return 0
   })
   
   // find q
@@ -94,6 +97,7 @@ const findTotalInvestment = (val=0) => {
       }else{
           q.push(true)
       }
+      return 0
   })
 
   for(let i = 0; i < q.length; i++){
