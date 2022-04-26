@@ -39,7 +39,6 @@ function Main() {
   const [savingsComparison, setSavingsComparison] = useState(0)
 
   //Email
-  const [email, setEmail] = useState(null)
   const [isEmailValid, setIsEmailValid] = useState(false)
 
   const formik = useFormik({
