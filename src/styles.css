@@ -1,4 +1,10 @@
+
 .yearBtn{
-    background-color: #0f4d92 !important;
+    background-color: #3F4444 !important;
     color: white !important;
 }
+
+.blurr {
+    color: transparent !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+ }
