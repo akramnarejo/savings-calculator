@@ -277,7 +277,7 @@ const ErrorMessage = ({name}) => {
                 <Tooltip title="1% savings on new space over the life of the lease." placement="right"><InfoOutlinedIcon fontSize='small'/></Tooltip>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
             </Box>
-            <Typography className={isEmailValid ? "": "blurr"} component="p" lineHeight={0.5} color="#201747" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>{`$${costAvoidance.toLocaleString()}`}</Typography>
+            <Typography className={isEmailValid ? "": "blurr"} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>{`$${costAvoidance.toLocaleString()}`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
             <Box display="flex" alignItems="center" gap={.2}>
