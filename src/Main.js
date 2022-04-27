@@ -326,7 +326,7 @@ const ErrorMessage = ({name}) => {
                 <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${totalInvestment.toLocaleString()}`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-                <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>TOTAL SAVINGs:</Typography>
+                <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>TOTAL SAVINGS:</Typography>
                 <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.round(totalSavings).toLocaleString()}`}</Typography>
             </Box>
             <Divider />
