@@ -1,10 +1,41 @@
 
 .yearBtn{
-    background-color: #3F4444 !important;
+    background-color: #440099 !important;
     color: white !important;
 }
 
 .blurr {
     color: transparent !important;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    text-shadow: 0 0 8px rgba(0,0,0,0.5);
  }
+
+.textfieldBox{
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    border-bottom: 1px solid #440099 !important;
+    gap: .2 !important;
+    padding-bottom: 4px !important;
+    padding-top: 4px !important;
+    box-sizing: border-box !important;
+}
+.textfieldBox:hover{
+    border-bottom: 2px solid #440099 !important;
+}
+.textfield1{
+    font-family: 'Rajdhani'; 
+    width: 80% !important;
+    border: none !important; 
+    outline: none !important;
+    font-size: 24px !important;
+    box-sizing: border-box !important;
+}
+.textfield2{
+    font-family: 'Rajdhani'; 
+    width: 85% !important;
+    border: none !important; 
+    outline: none !important;
+    font-size: 24px !important;
+    box-sizing: border-box !important;
+}
+
