@@ -144,75 +144,83 @@ const ErrorMessage = ({name}) => {
   return (
     
     <Container>
-    <Paper elevation={3} sx={{padding: 5, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-        <Box mt={5} mb={10}>
-        <Typography component="h1" sx={{fontWeight: 900, fontSize:{lg:54, md:35,xs:28}}}>SAVINGS CALCULATOR</Typography>
+    <Paper elevation={3} sx={{padding: {md: 5, xs: 2}, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+        <Box my={5}>
+        {/* <Typography component="h1" sx={{fontWeight: 900, fontSize:{lg:54, md:35,xs:28}}}>SAVINGS CALCULATOR</Typography> */}
         </Box>
         <Formik initialValues={formik.initialValues} enableReinitialize>
             <form onSubmit={handleSubmit}>
                 <Box maxwidth="900px">
                     <Grid container spacing={4} justifyContent="center">
-                        <Grid item xs={10} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
+                        <Grid item xs={11} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
                             <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{lg:20,md:18,sm:16,xs:14}}}>MONTHLY LEASE COST</Typography>
                             <Box className='textfieldBox'>
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>$</Typography>
-                                <input 
-                                    type='text' 
-                                    className='textfield1' 
-                                    placeholder='00'
-                                    name='leaseCost'
-                                    onBlur={handleBlur}
-                                    onChange={e => setFieldValue('leaseCost', e.target.value)}
-                                />
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>per sq.ft.</Typography>
+                                <Box className='innerBox'>
+                                    <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>$</Typography>
+                                    <input 
+                                        type='text' 
+                                        className='textfield1' 
+                                        placeholder='00'
+                                        name='leaseCost'
+                                        onBlur={handleBlur}
+                                        onChange={e => setFieldValue('leaseCost', e.target.value)}
+                                    />
+                                </Box>
+                                <Typography variant='subtitle2' component='span' sx={{textAlign: 'end',width: '35%', color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>per sq.ft.</Typography>
                             </Box>
                             <ErrorMessage name="leaseCost" />
                         </Grid>
-                        <Grid item xs={10} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
-                            <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{lg:20,md:18,sm:16,xs:14}}}>TOTAL PORTFOLIO</Typography>
-                            <Box className='textfieldBox'>
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>#</Typography>
-                                <input 
-                                    type='text' 
-                                    className='textfield2' 
-                                    placeholder='00'
-                                    name="portfolio"
-                                    onBlur={handleBlur}
-                                    onChange={e => setFieldValue('portfolio', e.target.value)}
-                                />
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>sq.ft.</Typography>
-                            </Box>
-                            <ErrorMessage name="portfolio" />
-                        </Grid>
-                        <Grid item xs={10} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
+                        <Grid item xs={11} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
                             <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{lg:20,md:18,sm:16,xs:14}}}>ANNUAL CAPEX SPEND</Typography>
                             <Box className='textfieldBox'>
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>$</Typography>
-                                <input 
-                                    type='text' 
-                                    className='textfield1' 
-                                    placeholder='00'
-                                    name="capexSpends"
-                                    onBlur={handleBlur}
-                                    onChange={e => setFieldValue('capexSpends', e.target.value)}
-                                />
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>per sq.ft.</Typography>
+                                <Box className='innerBox'>
+                                    <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>$</Typography>
+                                    <input 
+                                        type='text' 
+                                        className='textfield1' 
+                                        placeholder='00'
+                                        name="capexSpends"
+                                        onBlur={handleBlur}
+                                        onChange={e => setFieldValue('capexSpends', e.target.value)}
+                                    />
+                                </Box>
+                                <Typography variant='subtitle2' component='span' sx={{textAlign: 'end',width: '35%', color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>per sq.ft.</Typography>
                             </Box>
                             <ErrorMessage name="capexSpends" />
                         </Grid>
-                        <Grid item xs={10} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
+                        <Grid item xs={11} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
+                            <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{lg:20,md:18,sm:16,xs:14}}}>TOTAL PORTFOLIO</Typography>
+                            <Box className='textfieldBox'>
+                                <Box className='innerBox'>
+                                    <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>#</Typography>
+                                    <input 
+                                        type='text' 
+                                        className='textfield2' 
+                                        placeholder='00'
+                                        name="portfolio"
+                                        onBlur={handleBlur}
+                                        onChange={e => setFieldValue('portfolio', e.target.value)}
+                                    />
+                                </Box>
+                                <Typography variant='subtitle2' component='span' sx={{textAlign: 'end',width: '35%', color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>sq.ft.</Typography>
+                            </Box>
+                            <ErrorMessage name="portfolio" />
+                        </Grid>
+                        <Grid item xs={11} md={5} sx={{display: 'flex', flexDirection: 'column'}}>
                             <Typography variant='subtitle2' component='p' sx={{fontWeight: 700, fontSize:{lg:20,md:18,sm:16,xs:14}}}>EST. NEW SQ.FT. NEEDS</Typography>
                             <Box className='textfieldBox'>
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>#</Typography>
-                                <input 
-                                    type='text' 
-                                    className='textfield2' 
-                                    placeholder='00'
-                                    name="estNeeds"
-                                    onBlur={handleBlur}
-                                    onChange={e => setFieldValue('estNeeds', e.target.value)}
-                                />
-                                <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,xs:18}}}>sq.ft.</Typography>
+                                <Box className='innerBox'>
+                                    <Typography variant='subtitle2' component='span' sx={{color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>#</Typography>
+                                    <input 
+                                        type='text' 
+                                        className='textfield2' 
+                                        placeholder='00'
+                                        name="estNeeds"
+                                        onBlur={handleBlur}
+                                        onChange={e => setFieldValue('estNeeds', e.target.value)}
+                                    />
+                                </Box>
+                                <Typography variant='subtitle2' component='span' sx={{textAlign: 'end',width: '35%', color: 'gray', fontWeight: 700, fontSize:{lg:20,md: 18,xs: 16}}}>sq.ft.</Typography>
                             </Box>
                             <ErrorMessage name="estNeeds" />
                         </Grid>
