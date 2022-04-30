@@ -67,6 +67,20 @@ const ErrorMessage = ({name}) => {
     );
 };
 
+  
+
+  useEffect(() => {
+    setTotalSavings(costAvoidance+spaceOptimization)
+    const result = totalSavings - totalInvestment
+    setNetSavings(result > 0 ? result : 0)
+    setRoi(netSavings/totalInvestment)
+    if(totalInvestment){
+    //   setDirectSavings(findDirectSavings(totalInvestment, values.portfolio))
+    //   setSavingsComparison(findSavigsComparison(totalInvestment, values.portfolio))
+      setCostSF(totalInvestment/(((+values.portfolio)+(+values.estNeeds))*year))
+    }
+  },[totalSavings,netSavings,totalInvestment,values.portfolio, costAvoidance, spaceOptimization])
+
   const calculateSavings = (val) => {
     setYear(val)
     setCostAvoidance(0)
@@ -82,19 +96,6 @@ const ErrorMessage = ({name}) => {
     // setDirectSavings(0)
     // setSavingsComparison(0)
   }
-
-  useEffect(() => {
-    setTotalSavings(costAvoidance+spaceOptimization)
-    const result = totalSavings - totalInvestment
-    setNetSavings(result > 0 ? result : 0)
-    setRoi(netSavings/totalInvestment)
-    if(totalInvestment){
-    //   setDirectSavings(findDirectSavings(totalInvestment, values.portfolio))
-    //   setSavingsComparison(findSavigsComparison(totalInvestment, values.portfolio))
-      setCostSF(totalInvestment/(((+values.portfolio)+(+values.estNeeds))*year))
-    }
-  },[totalSavings,netSavings,totalInvestment,values.portfolio, costAvoidance, spaceOptimization])
-
   const handleClick = e => {
     switch(e.target.name){
       case "1":
@@ -345,7 +346,7 @@ const ErrorMessage = ({name}) => {
             <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Estimations</Typography>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>ROI:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`${Math.round(roi*100)}%`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`${Math.fround(roi*100)}%`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={1} color="#201747" fontSize={{md: 16}}>COST/SF:</Typography>
