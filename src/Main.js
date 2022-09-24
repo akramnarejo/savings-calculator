@@ -79,7 +79,7 @@ const ErrorMessage = ({name}) => {
     //   setSavingsComparison(findSavigsComparison(totalInvestment, values.portfolio))
       setCostSF(totalInvestment/(((+values.portfolio)+(+values.estNeeds))*year))
     }
-  },[totalSavings,netSavings,totalInvestment,values.portfolio, costAvoidance, spaceOptimization])
+  },[totalSavings,netSavings,totalInvestment,values.portfolio, costAvoidance, spaceOptimization, values?.estNeeds, year])
 
   const calculateSavings = (val) => {
     setYear(val)
@@ -236,7 +236,7 @@ const ErrorMessage = ({name}) => {
                             variant="text"
                             disableRipple 
                             type='submit'
-                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#041061', fontFamily: 'Verdana, sans-serif'}}
+                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#233a72', fontFamily: 'Inter, sans-serif'}}
                             onClick={handleClick}
                             >1 YEAR
                         </Button>
@@ -246,7 +246,7 @@ const ErrorMessage = ({name}) => {
                             variant="text"
                             disableRipple 
                             type="submit"
-                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#041061', fontFamily: 'Verdana, sans-serif'}}
+                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#233a72', fontFamily: 'Inter, sans-serif'}}
                             onClick={handleClick}
                             >2 YEAR
                         </Button>
@@ -256,7 +256,7 @@ const ErrorMessage = ({name}) => {
                             variant="text"
                             disableRipple 
                             type="submit"
-                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#041061', fontFamily: 'Verdana, sans-serif'}}
+                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#233a72', fontFamily: 'Inter, sans-serif'}}
                             onClick={handleClick}
                             >3 YEAR
                         </Button>
@@ -266,7 +266,7 @@ const ErrorMessage = ({name}) => {
                             variant="text"
                             disableRipple 
                             type="submit"
-                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#041061', fontFamily: 'Verdana, sans-serif'}}
+                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#233a72', fontFamily: 'Inter, sans-serif'}}
                             onClick={handleClick}
                             >4 YEAR
                         </Button>
@@ -276,7 +276,7 @@ const ErrorMessage = ({name}) => {
                             variant="text"
                             disableRipple 
                             type="submit"
-                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#041061', fontFamily: 'Verdana, sans-serif'}}
+                            sx={{fontSize: '18px', fontWeight: '900', padding: '2px 5px', color: '#233a72', fontFamily: 'Inter, sans-serif'}}
                             onClick={handleClick}
                             >5 YEAR
                         </Button>
@@ -318,7 +318,7 @@ const ErrorMessage = ({name}) => {
                 <Tooltip title="1% savings on new space over the life of the lease." placement="right"><InfoOutlinedIcon fontSize='small'/></Tooltip>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>COST AVOIDANCE:</Typography>
             </Box>
-            <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.round(costAvoidance).toLocaleString()}`}</Typography>
+            <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${Math.round(costAvoidance).toLocaleString()}`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
             <Box display="flex" alignItems="center" gap={.2}>
@@ -327,35 +327,35 @@ const ErrorMessage = ({name}) => {
                 </Tooltip>
                 <Typography component="p" lineHeight={1} color="#201747" fontSize={{md: 16}}>CAPEX COST SAVINGS:</Typography>
             </Box>
-            <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.round(spaceOptimization).toLocaleString()}`}</Typography>
+            <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${Math.round(spaceOptimization).toLocaleString()}`}</Typography>
             </Box>
             <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Return</Typography>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>TOTAL INVESTMENT:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${totalInvestment.toLocaleString()}`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${totalInvestment.toLocaleString()}`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>TOTAL SAVINGS:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.round(totalSavings).toLocaleString()}`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${Math.round(totalSavings).toLocaleString()}`}</Typography>
             </Box>
             <Divider />
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>NET SAVINGS:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.round(netSavings).toLocaleString()}`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${Math.round(netSavings).toLocaleString()}`}</Typography>
             </Box>
             <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Estimations</Typography>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>ROI:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`${Math.fround(roi*100)}%`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`${Math.fround(roi*100)}%`}</Typography>
             </Box>
             <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={1} color="#201747" fontSize={{md: 16}}>COST/SF:</Typography>
-                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 28, xs: 24}}>{`$${Math.fround(costSF).toFixed(2)}`}</Typography>
+                <Typography className={isBlurred ? "blurr": ""} component="p" lineHeight={0.5} color="#233a72" fontSize={{md: 28, xs: 24}}>{`$${Math.fround(costSF).toFixed(2)}`}</Typography>
             </Box>
             {/* <Typography mt={1} component="h3" sx={{fontSize:{sm:"20px", md:"24", lg:"26px" }}} px={2} py={1} borderRadius={1} boxSizing="border-box" backgroundColor="black" color="white" fontWeight={900} className="heading">Competitor Comparison</Typography> */}
             {/* <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Typography component="p" lineHeight={0.5} color="#201747" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>DIRECT SAVINGS W/ AT:</Typography>
-            <Typography component="p" lineHeight={0.5} color="#201747" fontFamily="Lato,'Lucida Grande',Verdana,sans-serif" fontSize={{md: 16}}>{`$${Math.fround(directSavings).toFixed(2)}`}</Typography>
+            <Typography component="p" lineHeight={0.5} color="#201747" fontFamily="Lato,'Lucida Grande',Inter,sans-serif" fontSize={{md: 16}}>DIRECT SAVINGS W/ AT:</Typography>
+            <Typography component="p" lineHeight={0.5} color="#201747" fontFamily="Lato,'Lucida Grande',Inter,sans-serif" fontSize={{md: 16}}>{`$${Math.fround(directSavings).toFixed(2)}`}</Typography>
             </Box> */}
             {/* <Box width="100%" sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                 <Typography component="p" lineHeight={1} color="#201747" fontSize={{md: 16}}>%SAVINGS COMPARISON:</Typography>

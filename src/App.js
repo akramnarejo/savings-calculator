@@ -6,7 +6,7 @@ function App() {
   const theme = createTheme({
     typography: {
       fontFamily: [
-        'Rajdhani'
+        'Inter', 'sans-serif'
       ].join(','),
     },
   });

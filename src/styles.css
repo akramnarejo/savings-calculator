@@ -1,6 +1,6 @@
 
 .yearBtn{
-    background-color: #440099 !important;
+    background-color: #233a72 !important;
     color: white !important;
 }
 
@@ -13,7 +13,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: space-between;
-    border-bottom: 1px solid #440099 !important;
+    border-bottom: 1px solid #233a72 !important;
     gap: .2 !important;
     padding-bottom: 4px !important;
     padding-top: 4px !important;
@@ -21,7 +21,7 @@
     width: '100%' !important;
 }
 .textfieldBox:hover{
-    border-bottom: 2px solid #440099 !important;
+    border-bottom: 2px solid #233a72 !important;
 }
 .innerBox{
     display: flex;
@@ -30,7 +30,7 @@
     border: '1px solid' !important;
 }
 .textfield1{
-    font-family: 'Rajdhani'; 
+    font-family: 'Inter', sans-serif; 
     width: 100% !important;
     border: none !important; 
     outline: none !important;
@@ -38,7 +38,7 @@
     box-sizing: border-box !important;
 }
 .textfield2{
-    font-family: 'Rajdhani'; 
+    font-family: 'Inter', sans-serif; 
     width: 85% !important;
     border: none !important; 
     outline: none !important;
