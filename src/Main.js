@@ -790,30 +790,6 @@ function Main() {
                 <Typography className={isBlurred ? "": "blurr"} component="p" lineHeight={0.5} color="#201747" fontSize={{md: 16}}>{`${Math.fround(savingsComparison*100).toFixed(2)}%`}</Typography>
             </Box> */}
         </Box>
-        <Box sx={{
-            display: "flex",
-            alignSelf: "flex-start",
-            gap: 1,
-            marginLeft: { lg: 10, sm: 5, xs: 0 },
-            marginTop: { md: 5, xs: 3 },
-          }}>
-        <Typography
-          component="p"
-          variant="body1"
-        >
-          <a style={{textDecoration: "none", color: 'black'}} href="https://twitter.com/akramnarejo" alt="twitter" target="_blank" rel="noreferrer">
-          <TwitterIcon color="primary"/> 
-          </a>
-        </Typography>
-        <Typography
-          component="p"
-          variant="body1"
-        >
-          <a style={{textDecoration: "none", color: 'black'}} href="https://linkedin.com/in/akramnarejo" alt="twitter" target="_blank" rel="noreferrer">
-          <LinkedInIcon color="primary"/> 
-          </a>
-        </Typography>
-        </Box>
       </Paper>
     </Container>
   );
