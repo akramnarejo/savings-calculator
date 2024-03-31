@@ -175,7 +175,7 @@ function Main() {
       <Paper
         elevation={3}
         sx={{
-          padding: { md: 5, xs: 2 },
+          padding: { md: 4, xs: 2 },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
